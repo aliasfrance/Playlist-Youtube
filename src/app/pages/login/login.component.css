@@ -1,0 +1,64 @@
+/* Centre toute la page */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f4f8;
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Conteneur centré */
+.login-container {
+  width: 100%;
+  max-width: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Titre centré et en gras */
+form h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #2d3748;
+  margin-bottom: 25px;
+}
+
+/* Labels */
+form label {
+  display: block;
+  font-size: 0.9rem;
+  color: #4a5568;
+  margin-bottom: 5px;
+  margin-top: 15px;
+}
+
+/* Champs de saisie */
+form input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+}
+  
+.register-text a {
+  color: #3182ce;
+  text-decoration: none;
+}
+
+.register-text a:hover {
+  text-decoration: underline;
+}
+
+/* Message d'erreur */
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  text-align: center;
+  margin-top: 10px;
+}

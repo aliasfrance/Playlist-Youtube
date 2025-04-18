@@ -1,0 +1,29 @@
+<!-- Formulaire de connexion centré -->
+<div class="login-container">
+  <form (ngSubmit)="onSubmit()">
+    <h2>Se connecter</h2>
+
+    <!-- Champ Nom d'utilisateur -->
+    <label for="username">Nom d'utilisateur</label>
+    <input type="text" id="username" [ngModel]="username()" (ngModelChange)="username.set($event)"
+      placeholder="Nom d'utilisateur" />
+
+    <!-- Champ Mot de passe -->
+    <label for="password">Mot de passe</label>
+    <input type="password" id="password" [ngModel]="password()" (ngModelChange)="password.set($event)"
+      placeholder="Mot de passe" />
+
+    <!-- Bouton de connexion -->
+    <button type="submit" [disabled]="!isFormValid()">Se connecter</button>
+
+    <!-- Lien d'inscription -->
+    <p class="register-text">
+      Pas encore de compte ? <a routerLink="/inscription">S'inscrire</a>
+    </p>
+
+ 
+
+    <!-- Message d'erreur -->
+    <p *ngIf="errorMessage()" class="error-message">{{ errorMessage() }}</p>
+  </form>
+</div>

@@ -1,8 +1,28 @@
-<header class="bg-red-600 text-white p-4 flex justify-between items-center">
-    <div class="space-x-2">
-        <a href="#" class="hover:underline">👤 S'inscrire</a>
-        <span>/</span>
-        <a href="#" class="hover:underline">🔐 Se connecter</a>
+
+<header class="header-container">
+    <div class="header-content">
+        <h1 class="title">YouTube Clone</h1>
+        <div class="auth-links">
+            <a href="/inscription" class="auth-link">👤 S'inscrire</a>
+            <span>/</span>
+            <a href="/login" class="auth-link">🔐 Se connecter</a>
+        </div>
     </div>
-    <h1 class="font-bold text-lg">YouTube Clone</h1>
+
+
+    <!-- Navigation avec connexion/déconnexion conditionnelle -->
+    <nav>
+        // <a routerLink="/">Home</a>
+    
+        <!-- Si l'utilisateur n'est pas connecté, afficher le lien "Login" -->
+        @if(!isLoggedIn()) {
+        <a routerLink="/login">Login</a>
+        }
+        <!-- Si l'utilisateur est connecté, afficher "Profile" et "Logout" -->
+        @if(isLoggedIn()) {
+        <a routerLink="/profil">Profile</a>
+        <a (click)="logout()">Logout</a>
+        }
+    </nav>
+   
 </header>
